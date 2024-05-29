@@ -1,0 +1,27 @@
+Lack of Creativity: AI systems are fundamentally based on algorithms and patterns. They lack the ability to think outside the box or come up with creative solutions 
+to problems. This limits their potential in fields that require innovation and creativity.
+
+Job Displacement: As AI systems become more capable, there’s a risk that they could replace human jobs, leading to unemployment and social instability.
+
+Privacy Concerns: AI systems often rely on large amounts of data, which can lead to concerns about privacy. There’s a risk that personal data could be misused or fall 
+into the wrong hands.
+
+Lack of Emotional Intelligence: AI systems do not possess emotions or the ability to understand the nuances of human emotion. This limits their effectiveness in roles that require emotional intelligence.
+
+Dependence on Technology: Over-reliance on AI could lead to a lack of critical thinking skills and an over-dependence on technology.
+
+Ethical Dilemmas: AI systems could be used in ways that are ethically questionable, such as in autonomous weapons or surveillance systems.
+
+Inequality: The benefits of AI could be unevenly distributed, leading to increased inequality. Those with access to AI technology could have a significant advantage over those who do not.
+
+Lack of Explainability: Many AI systems, particularly those based on deep learning, are often described as “black boxes” because their operations are not easily understood by humans. This lack of transparency can be a major issue in many applications.
+
+Regulation and Control: It can be difficult to regulate and control AI systems, particularly as they become more complex and autonomous. This could potentially lead to unforeseen consequences. - deep fake 
+
+----------------------------------------------------------------
+AI systems are fundamentally based on algorithms and patterns
+trained on old past data 
+lack the ability to think outside the box
+limits their potential that require innovation and creativity
+become more capable, there’s a risk that they could replace human jobs, leading to unemployment and social instability.
+lack of critical thinking skills and an over-dependence on technology.
