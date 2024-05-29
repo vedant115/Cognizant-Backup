@@ -1,0 +1,25 @@
+Name - (?<=Name: )\w+\s\w+\b
+
+Cust ID - (?<=Customer ID: )\d+\b
+
+Email - (?<=Email: )\w+.\w+@\w+.com\b
+
+Phone No - (?<=Phone Number: )\d{3}-\d{3}-\d{4}\b
+
+Add - (?<=Address: ).+\b
+
+
+Loan Amount - (?<=Loan Amount: )\$.+\b
+
+Home Value - (?<=Home Value: )\$.+\b
+
+Downpayment - (?<=Downpayment: )\$.+\b
+
+Interest Rate - (?<=Interest Rate: )\d+\.\d+%
+
+Duration (Years) - (?<=Duration \(Years\): )\d+\b
+
+
+Monthly HOA - (?<=Monthly HOA: )\$.+\b
+Annual Property Tax - (?<=Annual Property Tax: )\$.+\b
+Annual Home Insurance - (?<=Annual Home Insurance: )\$.+\b

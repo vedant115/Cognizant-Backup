@@ -1,0 +1,73 @@
+using System;
+using System.Collections.Generic;
+
+public class Program
+{
+    public static List<int> MarkList = new List<int>();
+
+    public static void AddMarks(int marks)
+    {
+        MarkList.Add(marks);
+    }
+
+    public static double GetGPAScored()
+    {
+        if (MarkList.Count == 0)
+        {
+            Console.WriteLine("No Marks Available");
+            return -1;
+        }
+        double total = 0;
+        foreach (int mark in MarkList)
+        {
+            total += mark * 3;
+        }
+        return total / (MarkList.Count * 3);
+    }
+
+    public static char GetGradeScored(double gpa)
+    {
+        if (gpa < 5 || gpa > 10)
+        {
+            Console.WriteLine("Invalid GPA");
+            return '\0';
+        }
+        if (gpa == 10) return 'S';
+        if (gpa >= 9) return 'A';
+        if (gpa >= 8) return 'B';
+        if (gpa >= 7) return 'C';
+        if (gpa >= 6) return 'D';
+        return 'E';
+    }
+
+    public static void Main(string[] args)
+    {
+        int choice;
+        do
+        {
+            Console.WriteLine("1. Add Mark\n2. Calculate GPA\n3. Get Grade\n4. Exit");
+            Console.WriteLine("Enter your choice");
+            choice = Convert.ToInt32(Console.ReadLine());
+            switch (choice)
+            {
+                case 1:
+                    Console.WriteLine("Enter the mark scored");
+                    AddMarks(Convert.ToInt32(Console.ReadLine()));
+                    break;
+                case 2:
+                    double gpa = GetGPAScored();
+                    if (gpa != -1)
+                        Console.WriteLine($"GPA Scored: {gpa}");
+                    break;
+                case 3:
+                    char grade = GetGradeScored(GetGPAScored());
+                    if (grade != '\0')
+                        Console.WriteLine($"Grade Scored: {grade}");
+                    break;
+                case 4:
+                    Console.WriteLine("Thank You");
+                    break;
+            }
+        } while (choice != 4);
+    }
+}

@@ -1,0 +1,104 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class HotelBill
+{
+    public string BillNo;
+    public double BillAmount;
+    public string Status;
+}
+
+class Program
+{
+    public static List<HotelBill> billList = new List<HotelBill>();
+    
+    public static List<HotelBill> GetBillDetails(string billNo){
+        List<HotelBill> res = new List<HotelBill>();
+        
+        foreach(var bill in billList){
+            if(bill.BillNo == billNo){
+                res.Add(bill);
+                break;
+            }
+        }
+        return res;
+    }
+    
+    public static List<HotelBill> UpdateBillStatus(string billNo, string status){
+        List<HotelBill> res = new List<HotelBill>();
+        
+        foreach(var bill in billList){
+            if(bill.BillNo == billNo){
+                bill.Status = status;
+                res.Add(bill);
+                break;
+            }
+        }
+        return res;
+    }
+    
+    public static List<HotelBill> SortBillByStatus(){
+        // List<HotelBill> res = new List<HotelBill>();
+        
+        // res = billList.OrderByDescending(hotel => hotel.Status).ToList();
+
+        var res = (from hotel in billList orderby hotel.Status descending select hotel);
+
+        return res.ToList();
+    }
+
+    public static void Main(string[] args){
+        
+        billList.Add(new HotelBill { BillNo = "HB001", BillAmount = 5000.75, Status = "Paid" });
+        billList.Add(new HotelBill { BillNo = "HB002", BillAmount = 3000.50, Status = "Unpaid" });
+        billList.Add(new HotelBill { BillNo = "HB003", BillAmount = 4500.00, Status = "Paid" });
+        billList.Add(new HotelBill { BillNo = "HB004", BillAmount = 3500.25, Status = "Unpaid" });
+        billList.Add(new HotelBill { BillNo = "HB005", BillAmount = 4000.00, Status = "Paid" });
+
+        Console.WriteLine("1. Get bill details\n2.Update Bill Status\n3.Sort Bill By Status\n4.Exit\nEnter your choice");
+        string ch = Console.ReadLine();
+        
+        switch(ch){
+            case "1":
+                Console.WriteLine("Enter bill number");
+                string billNo = Console.ReadLine();
+                var ans = GetBillDetails(billNo);
+                if(ans.Count != 0){
+                    foreach(var hotel in ans){
+                        Console.WriteLine("BillNo\tBillAmount\tStatus");
+                        Console.WriteLine($"{hotel.BillNo}\t{hotel.BillAmount}\t{hotel.Status}");
+                    }
+                }
+                else{
+                    Console.WriteLine("Invalid Bill Number");
+                }
+                break;
+                
+            case "2":
+                Console.WriteLine("Enter bill number");
+                string billN = Console.ReadLine();
+                Console.WriteLine("Enter bill status");
+                string status = Console.ReadLine();
+                var ans1 = UpdateBillStatus(billN, status);
+                if(ans1.Count != 0){
+                    foreach(var hotel in ans1){
+                        Console.WriteLine("BillNo\tBillAmount\tStatus");
+                        Console.WriteLine($"{hotel.BillNo}\t{hotel.BillAmount}\t{hotel.Status}");
+                    }
+                }
+                else{
+                    Console.WriteLine("Invalid Bill Number");
+                }
+                break;
+                
+            case "3":
+                var ans2 = SortBillByStatus();
+                foreach(var hotel in ans2){
+                    Console.WriteLine($"{hotel.BillNo} --- {hotel.BillAmount} --- {hotel.Status}");
+                }   
+                break;
+        }
+        
+    }
+}

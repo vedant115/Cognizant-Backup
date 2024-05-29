@@ -1,0 +1,53 @@
+/* selector { property : value } */
+
+p {
+    color: green;
+}
+
+body {
+    background: lightblue url("images/html5.jfif") no-repeat;
+}
+
+div {
+    background-color: aliceblue;
+}
+
+#one {
+    color: pink;
+}
+
+h1.red {
+    color: red;
+    text-align: center;
+} 
+
+h2, h3{
+    color: yellow;
+}
+
+.divider {
+hight: 20px
+}
+
+.block {
+    color: #ffffff;
+    background-color: #000000;
+    padding: 100px 50px 100px 0;
+    border: 10px solid red;
+    margin: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,185 @@
+{
+  "version": 2,
+  "dgSpecHash": "4tDygmjYn4THKcPSvhJozzqA16YBAcyDzxXg890FwLzp9HBpSkqj1st3PrXIx2aLqASOu2LPEuLyMR+3QbnBOw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local\\",
+  "expectedPackageFiles": [
+    "C:\\Users\\2319930\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\csvhelper\\15.0.5\\csvhelper.15.0.5.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\documentformat.openxml\\2.5.0\\documentformat.openxml.2.5.0.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\3.1.6\\microsoft.aspnetcore.connections.abstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\3.1.6\\microsoft.aspnetcore.http.connections.client.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\3.1.6\\microsoft.aspnetcore.http.connections.common.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.6\\microsoft.aspnetcore.http.features.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.aspnetcore.signalr.client\\3.1.6\\microsoft.aspnetcore.signalr.client.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\3.1.6\\microsoft.aspnetcore.signalr.client.core.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\3.1.6\\microsoft.aspnetcore.signalr.common.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\3.1.6\\microsoft.aspnetcore.signalr.protocols.json.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.6\\microsoft.extensions.configuration.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.6\\microsoft.extensions.configuration.abstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.6\\microsoft.extensions.configuration.binder.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.6\\microsoft.extensions.dependencyinjection.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.6\\microsoft.extensions.dependencyinjection.abstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.extensions.logging\\3.1.6\\microsoft.extensions.logging.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.6\\microsoft.extensions.logging.abstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.extensions.options\\3.1.6\\microsoft.extensions.options.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.6\\microsoft.extensions.primitives.3.1.6.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.21\\microsoft.rest.clientruntime.2.3.21.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\microsoft.visualstudio.ole.interop\\16.7.30328.74\\microsoft.visualstudio.ole.interop.16.7.30328.74.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\npoi\\2.4.1\\npoi.2.4.1.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\sharpziplib\\1.2.0\\sharpziplib.1.2.0.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\system.io.abstractions\\3.0.10\\system.io.abstractions.3.0.10.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\system.io.pipelines\\4.7.1\\system.io.pipelines.4.7.1.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\system.text.encodings.web\\4.7.1\\system.text.encodings.web.4.7.1.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\uipath.excel.activities\\2.9.5\\uipath.excel.activities.2.9.5.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\uipath.platform\\20.10.4\\uipath.platform.20.10.4.nupkg.sha512",
+    "C:\\Users\\2319930\\.nuget\\packages\\uipath.system.activities\\20.10.4\\uipath.system.activities.20.10.4.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1801",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "UiPath.System.Activities"
+    },
+    {
+      "code": "NU1801",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "UiPath.System.Activities"
+    },
+    {
+      "code": "NU1801",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "UiPath.Excel.Activities"
+    },
+    {
+      "code": "NU1801",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "UiPath.Excel.Activities"
+    },
+    {
+      "code": "NU1801",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "UiPath.Excel.Activities"
+    },
+    {
+      "code": "NU1801",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "UiPath.Excel.Activities"
+    },
+    {
+      "code": "NU1801",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "UiPath.System.Activities"
+    },
+    {
+      "code": "NU1801",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "UiPath.System.Activities"
+    },
+    {
+      "code": "NU1801",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "CsvHelper"
+    },
+    {
+      "code": "NU1801",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "CsvHelper"
+    },
+    {
+      "code": "NU1801",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "Microsoft.VisualStudio.OLE.Interop"
+    },
+    {
+      "code": "NU1801",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "Microsoft.VisualStudio.OLE.Interop"
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local",
+      "message": "UiPath.Excel.Activities 2.9.5 depends on CsvHelper (>= 2.13.5) but CsvHelper 2.13.5 was not found. An approximate best match of CsvHelper 15.0.5 was resolved.",
+      "libraryId": "CsvHelper",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1",
+        ".NETFramework,Version=v4.6.1/win10-x64"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local",
+      "message": "UiPath.System.Activities 20.10.4 depends on CsvHelper (>= 2.13.5) but CsvHelper 2.13.5 was not found. An approximate best match of CsvHelper 15.0.5 was resolved.",
+      "libraryId": "CsvHelper",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1",
+        ".NETFramework,Version=v4.6.1/win10-x64"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2319930\\OneDrive - Cognizant\\Documents\\UiPath\\Practice 3 - Calculating Percentages of Expenses\\.local",
+      "message": "UiPath.Excel.Activities 2.9.5 depends on Microsoft.VisualStudio.OLE.Interop (>= 7.10.6071) but Microsoft.VisualStudio.OLE.Interop 7.10.6071 was not found. An approximate best match of Microsoft.VisualStudio.OLE.Interop 16.7.30328.74 was resolved.",
+      "libraryId": "Microsoft.VisualStudio.OLE.Interop",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1",
+        ".NETFramework,Version=v4.6.1/win10-x64"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+
+.Where(x => x.Value == maxPower): 
+This is a filtering operation. It goes through each entry in the dictionary (each entry is represented by x), and checks if the value of the entry (which is the battery power, accessed by x.Value) is equal to maxPower. maxPower is presumably the maximum power among all power banks. The result of this operation is a collection of entries where the condition is true.
+
+.Select(x => x.Key): 
+This is a projection operation. It transforms each entry in the collection resulting from the previous operation into just the key of the entry (which is the power bank name, accessed by x.Key). The result of this operation is a collection of power bank names.
+
+.ToList(): 
+This operation converts the collection of power bank names into a list.
+
+Dictionary Methods:
+
+Add(key, value): Adds an item to the dictionary.
+
+ContainsKey(key): Checks if a specific key exists in the dictionary.
+
+ContainsValue(value): Checks if a specific value exists in the dictionary.
+
+Remove(key): Removes an item with the specified key from the dictionary.
+
+TryGetValue(key, out value): Tries to get the value of a specific key. If the key does not exist, it returns false.
+
+List Methods:
+Add(item): Adds an item to the list.
+
+Contains(item): Checks if a specific item exists in the list.
+
+IndexOf(item): Returns the index of the first occurrence of a value in the list.
+
+Remove(item): Removes the first occurrence of a specific object from the list.
+
+Sort(): Sorts the elements in the entire list.
+
+
+var sortedKeys = new List<string>(dict.Keys);
+sortedKeys.Sort();
+
+Traversing: You can traverse a dictionary using a foreach loop:
+foreach(KeyValuePair<string, int> item in dict)
+{
+    Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
+}
+
+Filtering: You can filter a dictionary using LINQ:
+var result = dict.Where(pair => pair.Value > 10);
+
+var sortedKeys = dict.Keys.OrderBy(key => key).ToList();
+
+
+Dictionary<string, int> sortedDict = dict.OrderBy(pair => pair.Key).ToDictionary(pair => pair.Key, pair => pair.Value);
+
+
+Dictionary to List: You can convert a dictionary to a list of key-value pairs:
+List<KeyValuePair<string, int>> list = dict.ToList();
+
+
+Removing Duplicates: You can remove duplicates from a list using the Distinct method:
+List<int> distinct = list.Distinct().ToList();
+
+
+Finding Common Elements: You can find common elements between two lists using the Intersect method:
+List<int> common = list1.Intersect(list2).ToList();
+
+
+List to Dictionary: You can convert a list to a dictionary, provided you have a unique key for each element:
+Dictionary<string, int> dict = list.ToDictionary(item => item.Key, item => item.Value);
+
+
+Zip() method in combination with the ToDictionary() method to form a dictionary from two lists. Here’s an example:
+List<string> keys = new List<string> { "One", "Two", "Three" };
+List<int> values = new List<int> { 1, 2, 3 };
+Dictionary<string, int> dict = keys.Zip(values, (k, v) => new { Key = k, Value = v }).ToDictionary(x => x.Key, x => x.Value);
+foreach (var item in dict)
+{
+    Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
+}
+
+
+DATETIME - 
+
+DateTime.Parse()
+DateTime.ParseExact(InstalledDate, "MM/dd/yyyy", null);

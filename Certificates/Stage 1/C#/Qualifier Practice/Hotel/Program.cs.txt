@@ -1,0 +1,98 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    public static Dictionary<string, float> hotelDetails = new Dictionary<string, float>();
+    
+    public static Dictionary<string, float> SearchHotel(string hotelName){
+        Dictionary<string, float> res = new Dictionary<string, float>();
+        
+        foreach(var kvp in hotelDetails){
+            if(kvp.Key == hotelName){
+                res.Add(kvp.Key, kvp.Value);
+                return res;
+            }
+        }
+        return res;
+    }
+    
+    public static Dictionary<string, float> UpdateHotelRating(string hotelName, float rating){
+        Dictionary<string, float> res1 = new Dictionary<string, float>();
+        
+        foreach(var kvp in hotelDetails){
+            if(kvp.Key == hotelName){
+                res1.Add(kvp.Key, rating);
+                return res1;
+            }
+        }
+        return res1;
+    }
+    
+    public static Dictionary<string, float> SortByHotelName(){
+        Dictionary<string, float> res2 = new Dictionary<string, float>(); 
+        var sortedHotels = hotelDetails.OrderBy(hotel => hotel.Key);
+        foreach(var hotel in sortedHotels){
+            res2.Add(hotel.Key, hotel.Value);
+        }
+        return res2;
+    }
+
+    public static void Main(string[] args){
+        hotelDetails.Add("Jungle Resort", 4.5f);
+        hotelDetails.Add("Mandarin Oriental", 5);
+        hotelDetails.Add("Montage Kapalua Bay", 4);
+        hotelDetails.Add("The Greenwich Hotel", 5);
+        hotelDetails.Add("The Hay Adams", 3);
+        
+        // while(true)
+        // {
+            Console.WriteLine("1. Search by hotel name\n2. Update hotel rating\n3. Sort hotels by name\n4. Exit");
+            int opt = Convert.ToInt32(Console.ReadLine());
+            switch(opt)
+            {
+                case 1:
+                    Console.WriteLine("Enter the hotel name");
+                    string s1 = Console.ReadLine();
+                    Dictionary<string,float> n1 = SearchHotel(s1);
+                    foreach(KeyValuePair<string,float> x in n1)
+                    {
+                        Console.WriteLine(x.Key+" "+x.Value);
+                    }
+                    break;
+                    
+                case 2:
+                    Console.WriteLine("Enter the hotel name");
+                    string s2 = Console.ReadLine();
+                    Console.WriteLine("Enter the rating");
+                    float r = Convert.ToSingle(Console.ReadLine());
+                    Dictionary<string,float> n2 = UpdateHotelRating(s2,r);
+                    if(n2.Count==0)
+                    {
+                        Console.WriteLine("Hotel Not Found");
+                    }
+                    else
+                    {
+                        foreach(KeyValuePair<string,float> x in n2)
+                        {
+                            Console.WriteLine(x.Key+" "+x.Value);
+                        }
+                    }
+                    break;
+                    
+                case 3:
+                    Dictionary<string,float> n3 = SortByHotelName();
+                    foreach(KeyValuePair<string,float> x in n3)
+                    {
+                        Console.WriteLine(x.Key+" "+x.Value);
+                    }
+                    break;
+                    
+                case 4:
+                    Console.WriteLine("Thank You");
+                    break;
+            }
+        // }
+    }
+}

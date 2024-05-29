@@ -1,0 +1,23 @@
+string text = System.IO.File.ReadAllText(@"path");
+Console.WriteLine(text);
+
+string[] lines = System.IO.File.ReadAllLines(@"path");
+
+foreach(string line in lines){}
+
+--------------------------------------------------------------------------------------------------------------------------
+
+string[] lines = {"first line", "second line", "third line"}
+System.IO.File.WriteAllLines(@"path", lines);
+
+-----------------------------------------------------------
+System.IO.File.WriteAllText(@"path", text);
+
+-----------------------------------------------------------
+using(StreamWriter file = new StreamWriter(@"path")){
+	foreach(string line in lines){
+		file.WriteLine(line);
+	}
+}
+
+ 

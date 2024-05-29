@@ -1,0 +1,79 @@
+using System;
+using System.Collections.Generic;
+
+class Movie
+{
+    public string MovieName{get; set;}
+    public string ScreenedDate{get; set;}
+    public string RemovedDate{get; set;}
+    public double Price{get; set;}
+}
+
+class Program
+{
+    public static Dictionary<int,Movie> screeningDetails = new Dictionary<int,Movie>();
+    
+    public static Dictionary<string, double> MovieScreenedMoreNumberOfDays(){
+            int maxDays = 0;
+            Dictionary<string, double> res = new Dictionary<string, double>();
+            foreach(var movie in screeningDetails.Values){
+                TimeSpan diff = DateTime.Parse(movie.RemovedDate)-DateTime.Parse(movie.ScreenedDate);
+                if(diff.Days > maxDays){
+                    maxDays = diff.Days;
+                }
+            }
+            
+            foreach(var movie in screeningDetails.Values){
+                TimeSpan diff1 = DateTime.Parse(movie.RemovedDate)-DateTime.Parse(movie.ScreenedDate);
+                if(diff1.Days == maxDays){
+                    res.Add(movie.MovieName, movie.Price);
+                }
+            }
+            return res;
+        }
+        
+    public static Dictionary<string, double> MovieWithScreenedDays(){
+        Dictionary<string, double> res1 = new Dictionary<string, double>();
+        foreach(var movie in screeningDetails.Values){
+            TimeSpan diff2 = DateTime.Parse(movie.RemovedDate)-DateTime.Parse(movie.ScreenedDate);
+            res1.Add(movie.MovieName, diff2.Days);
+        }
+        return res1;
+    }
+    
+    public static void Main(string[] args) {
+        screeningDetails.Add(1,new Movie{MovieName="Eternals",ScreenedDate="04/25/2020",RemovedDate="05/30/2020",Price=350});
+        screeningDetails.Add(2,new Movie{MovieName="Iron Man",ScreenedDate="07/15/2008",RemovedDate="08/15/2008",Price=100});
+        screeningDetails.Add(3,new Movie{MovieName="Avatar",ScreenedDate="10/25/2003",RemovedDate="02/05/2004",Price=150});
+        screeningDetails.Add(4,new Movie{MovieName="LightYear",ScreenedDate="07/10/2020",RemovedDate="07/30/2020",Price=175});
+        screeningDetails.Add(5,new Movie{MovieName="Black Panther",ScreenedDate="05/17/2020",RemovedDate="06/10/2020",Price=200});
+        
+        Console.WriteLine("1. Movie screening more number of days\n2. Movie with their screening days\n3. Exit\nEnter your choice");
+        string ch = Console.ReadLine();
+        
+        // Program obj = new Program();
+        switch(ch){
+            case "1":
+                var ans = MovieScreenedMoreNumberOfDays();
+                foreach(var kvp in ans){
+                    Console.WriteLine("{0}  {1}",kvp.Key, kvp.Value);
+                }
+                break;
+                
+            case "2":
+                var ans1 = MovieWithScreenedDays();
+                foreach(var kvp in ans1){
+                    Console.WriteLine("{0}  {1}",kvp.Key, kvp.Value);
+                }
+                break;
+                
+            case "3":
+                Console.WriteLine("Thank You");
+                break;
+                
+            default:
+                Console.WriteLine("Invalid Response");
+                break;
+        }
+    }
+}

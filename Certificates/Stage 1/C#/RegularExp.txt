@@ -1,0 +1,45 @@
+\+  = finds all '+' symbols
+\+$ = finds all '+' symbol at the end
+
+[a-z] = 
+[A-Z] = 
+
+[1-5] = 1 to 5
+[^1-5] = except 1 to 5
+
+
+\d\d\d-\d\d\d-\d\d\d\d = 202-555-2342
+
+similarly =  \d{3}-\d{3}-\d{4}
+
+\d{3}[.#-]\d{3}[.#-]\d{4} =
+
+202-555-2342
+202.555.2342
+202#555#2342
+
+ Mr|Ms =
+
+() = for grouping
+
+* = matches previous ele zero or more time
++ = matches previous ele one or more time
+? = matches previous ele zero or one time
+
+
+(\+49)|0049|0?1(6|7)\d /\d{8} = German Phone No.
+
+
+Mr|Ms.?\s\w+ = Mr. Name, Ms. Name
+
+
+https?://(www.)?(\w+)(\.\w+) = websites
+
+
+string pattern = @"exp";
+Regex regex = new Regex(pattern)
+
+
+
+
+

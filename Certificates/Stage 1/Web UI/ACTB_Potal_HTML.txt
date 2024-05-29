@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ACTB Connection Portal</title>
+        <style>
+            body {
+                background-color: #EED426;
+            }
+            h1 {
+                color: #006666;
+                font-family: Verdana;
+                text-align: center;
+            }
+            #rentalcost {
+                border: 1px solid;
+                float: right;
+                text-align: center;
+            }
+        </style>
+        <script>
+            function calMonthlyRentalCost(){
+                let schemeCost = {
+                    "Local": 200,
+                    "STD": 350,
+                    "FullTalkTime": 500
+                }
+                let monRental = {
+                    "Pre": 75,
+                    "Post": 150
+                }
+                let duration = parseInt(document.getElementById("duration").value);
+                let schemes = document.getElementsByName("scheme");
+                let scheme;
+                for(let op of schemes){
+                    if(op.checked){
+                        scheme = op.value;
+                        break;
+                    }
+                }
+                let conType = document.getElementById("connectiontype").value;
+                let totalCost = (duration * schemeCost[scheme]) + monRental[conType];
+                document.getElementById("result").innerHTML = "The Total Monthly Rental Cost is Rs. " + totalCost;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>ACTB Connection Portal</h1>
+        <table>
+            <tr>
+                <td>
+                    <label for="custname">Customer Name</label>
+                </td>
+                <td>
+                    <input type="text" name="custname" id="custname" pattern="[A-Za-z ]+" placeholder="Enter the customer name" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Customer Email</label>
+                </td>
+                <td>
+                    <input type="email" name="email" id="email" placeholder="abc@gmail.com" required/>
+                </td>
+            </tr><tr>
+                <td>
+                    <label for="mobile">Mobile Number</label>
+                </td>
+                <td>
+                    <input type="text" name="mobile" id="mobile" pattern="[789]{1}[0-9]{9}" placeholder="Enter the Mobile Number" required/>
+                </td>
+            </tr><tr>
+                <td>
+                    <label for="conntype">Type of Broadband</label>
+                </td>
+                <td>
+                    <select name="conntype" id="connectiontype" value="connectiontype" required>
+                        <option id="Pre" value="Pre">Pre</option>
+                        <option id="Post" value="Post">Post</option>
+                    </select>
+                </td>
+            </tr><tr>
+                <td>
+                    <label for="">Scheme Name</label>
+                </td>
+                <td>
+                    <input type="radio" name="scheme" id="scheme1" value="Local"/><label for="scheme1">Local</label>
+                    <input type="radio" name="scheme" id="scheme2" value="STD"/><label for="scheme2">STD</label>
+                    <input type="radio" name="scheme" id="scheme3" value="FullTalkTime"/><label for="scheme3">FullTalkTime</label>
+                </td>
+            </tr><tr>
+                <td>
+                    <label for="">Connection Duration</label>
+                </td>
+                <td>
+                    <input type="number" min="1" max="12" name="duration" id="duration" required/>
+                </td>
+            </tr><tr>
+                <td>
+                    <button type="submit" onclick="calMonthlyRentalCost()" id="submit" name="submit">Connection Bill Amount</button>
+                </td>
+                <td>
+                    <button type="reset" id="clear" name="clear">Reset</button>
+                </td>
+            </tr>
+        </table>
+        <div id="result"></div>
+        <table id="rentalcost" value="rentalcost" border="1" name="Rental Cost Table">
+            <caption>Rental Cost Table</caption>
+            <thead>
+            <tr>
+                <th>
+                    Connection Type
+                </th>
+                <th>
+                    Call Limit
+                </th>
+                <th>
+                    Monthly Rental
+                </th>
+            </tr>
+            </thead>
+            <tr>
+                <td>
+                    Pre
+                </td>
+                <td>
+                    500
+                </td>
+                <td>
+                    75
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Post
+                </td>
+                <td>
+                    Unlimited
+                </td>
+                <td>
+                    150
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
